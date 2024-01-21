@@ -17,5 +17,11 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
+      }
+    }
+
   }
 }

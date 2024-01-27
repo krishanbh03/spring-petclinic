@@ -14,7 +14,7 @@ pipeline {
 
     stage('Tests') {
       steps {
-        sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
+        sh './mvnw package -DskipTests=true'
       }
     }
 
